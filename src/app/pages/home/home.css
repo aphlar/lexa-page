@@ -1,0 +1,48 @@
+.home-page {
+  background-color: #000;
+}
+
+.home-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 900ms ease,
+    transform 1200ms ease;
+}
+
+.home-background.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.home-loader {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 900ms ease;
+  pointer-events: none;
+}
+
+.home-loader.loaded {
+  opacity: 0;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+}
+
+.home-title {
+  color: #fff;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}

@@ -1,0 +1,21 @@
+<p>home works!</p>
+<section class="home-page position-relative min-vh-100 overflow-hidden">
+  <img
+    class="home-background"
+    [class.loaded]="isLoaded"
+    [src]="content.hero.backgroundImage"
+    alt="Imagen de fondo"
+    (load)="onBackgroundLoaded()"
+  />
+
+  <div
+    class="home-loader"
+    [class.loaded]="isLoaded"
+  ></div>
+
+  <div class="home-content container min-vh-100 d-flex align-items-center justify-content-center text-center">
+    <h1 class="home-title">
+      {{ content.hero.title }}
+    </h1>
+  </div>
+</section>
