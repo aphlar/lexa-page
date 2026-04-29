@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HOME_CONTENT } from '../../core/content/home.content';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

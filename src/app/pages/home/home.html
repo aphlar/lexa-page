@@ -1,4 +1,3 @@
-<p>home works!</p>
 <section class="home-page position-relative min-vh-100 overflow-hidden">
   <img
     class="home-background"
@@ -13,9 +12,40 @@
     [class.loaded]="isLoaded"
   ></div>
 
-  <div class="home-content container min-vh-100 d-flex align-items-center justify-content-center text-center">
-    <h1 class="home-title">
+  <div class="home-content container min-vh-100 d-flex flex-column align-items-center justify-content-center text-center py-5">
+    <h1 class="home-title mb-4">
       {{ content.hero.title }}
     </h1>
+
+    <nav class="home-tabs nav nav-tabs justify-content-start mb-0 w-100">
+      <a
+        class="nav-link"
+        routerLink="/info"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Info
+      </a>
+
+      <a
+        class="nav-link"
+        routerLink="/cost"
+        routerLinkActive="active"
+      >
+        Cost
+      </a>
+
+      <a
+        class="nav-link"
+        routerLink="/agenda"
+        routerLinkActive="active"
+      >
+        Agenda
+      </a>
+    </nav>
+
+    <div class="home-tab-panel w-100 mx-auto">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </section>
